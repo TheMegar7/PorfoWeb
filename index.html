@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Rauru — Portfolio</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div class="app">
+          <aside class="panel-left">
+            <div class="card identity">
+              <div class="avatar" aria-hidden="true"></div>
+              <div class="id-text">
+                <div class="name">RAÚL</div>
+                <div class="tagline">Programador · Portfolio</div>
+              </div>
+            </div>
+      
+            <div class="card stats">
+              <div class="stat"><span class="k">STATUS</span><span class="v">ONLINE</span></div>
+              <div class="stat"><span class="k">ROL</span><span class="v">DEV</span></div>
+              <div class="stat"><span class="k">UBICACIÓN</span><span class="v">EU/ES</span></div>
+            </div>
+      
+            <div class="card nav">
+              <button class="nav-btn is-active" data-view="perfil">PERFIL</button>
+              <button class="nav-btn" data-view="estudios">ESTUDIOS</button>
+              <button class="nav-btn" data-view="competencias">COMPETENCIAS</button>
+              <button class="nav-btn" data-view="proyectos">PROYECTOS</button>
+              <button class="nav-btn" data-view="contacto">CONTACTO</button>
+            </div>
+          </aside>
+      
+          <main class="panel-main">
+            <header class="topbar">
+              <div class="crumbs">MENÚ / <span id="crumb">PERFIL</span></div>
+              <div class="meta">v0.1 · HTML/CSS/JS</div>
+            </header>
+      
+            <section class="content">
+              <article class="view is-active" id="view-perfil">
+                <h1>PERFIL</h1>
+                <p>Texto breve: quién eres, qué buscas, qué aportas.</p>
+              </article>
+      
+              <article class="view" id="view-estudios">
+                <h1>ESTUDIOS</h1>
+                <p>Tu formación, hitos, certificaciones.</p>
+              </article>
+      
+              <article class="view" id="view-competencias">
+                <h1>COMPETENCIAS</h1>
+                <p>Lenguajes, herramientas, soft skills (formato “atributos” tipo Cyberpunk).</p>
+              </article>
+      
+              <article class="view" id="view-proyectos">
+                <h1>PROYECTOS</h1>
+                <p>Cards con imágenes, stack, links, y bullets técnicos.</p>
+              </article>
+      
+              <article class="view" id="view-contacto">
+                <h1>CONTACTO</h1>
+                <p>Email, LinkedIn, GitHub, y/o formulario.</p>
+              </article>
+            </section>
+          </main>
+        </div>
+      
+        <script src="script.js"></script>
+      </body>
+</html>
