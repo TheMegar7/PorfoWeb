@@ -1,99 +1,268 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Rauru — Portfolio</title>
-        <link rel="stylesheet" href="style.css" />
-      </head>
-      <body>
-        <div class="app">
-          <header class="hud-top">
-            <div class="hud-left">
-              <div class="hud-pair">
-                <span class="hud-num">43</span>
-                <span class="hud-label">NIVEL</span>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Raúl — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- HUD TOP -->
+    <header class="hud-top">
+      <button class="hud-id" id="btn-overview" title="Volver a Overview">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="hud-id-text">
+          <div class="hud-name">RAÚL</div>
+          <div class="hud-sub">
+            <span class="chip">NIVEL <strong id="age">--</strong></span>
+            <span class="chip chip-muted">DEV</span>
+          </div>
+        </div>
+      </button>
+
+      <nav class="hud-tabs" aria-label="Secciones">
+        <button class="tab is-active" data-view="overview">OVERVIEW</button>
+        <button class="tab" data-view="cyberware">CIBERWARE</button>
+        <button class="tab" data-view="inventory">INVENTARIO</button>
+        <button class="tab" data-view="character">PERSONAJE</button>
+        <button class="tab" data-view="journal">DIARIO</button>
+        <button class="tab" data-view="map">MAPA</button>
+      </nav>
+
+      <div class="hud-right">
+        <div class="hud-chip">STATUS: <span class="accent-a">ONLINE</span></div>
+        <div class="hud-chip">BUILD: v0.2</div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="panel-main">
+      <header class="topbar">
+        <div class="crumbs">MENÚ / <span id="crumb">OVERVIEW</span></div>
+        <div class="meta">Dashboard clínico · acentos neón</div>
+      </header>
+
+      <section class="content">
+        <!-- OVERVIEW -->
+        <article class="view is-active" id="view-overview">
+          <div class="overview">
+            <div class="ov-col left">
+              <button class="ov-card" data-view="cyberware">
+                <div class="ov-title">CIBERWARE</div>
+                <div class="ov-sub">Formación · Certificaciones · Idiomas</div>
+                <div class="ov-mini">+ ver detalles</div>
+              </button>
+
+              <button class="ov-card" data-view="inventory">
+                <div class="ov-title">INVENTARIO</div>
+                <div class="ov-sub">Repos · demos · piezas mostrables</div>
+                <div class="ov-mini">+ abrir inventario</div>
+              </button>
+            </div>
+
+            <div class="ov-center">
+              <div class="character-frame">
+                <!-- Sustituye por imagen/animación tuya -->
+                <div class="character-placeholder">
+                  <div class="cp-title">PERSONAJE</div>
+                  <div class="cp-sub">Imagen / render / animación</div>
+                </div>
               </div>
-              <div class="hud-pair">
-                <span class="hud-num">50</span>
-                <span class="hud-label">REPUTACIÓN</span>
+
+              <!-- Summary extra (5º bloque) -->
+              <button class="ov-card wide" data-view="character">
+                <div class="ov-title">PERSONAJE</div>
+                <div class="ov-sub">Árbol de habilidades · tecnologías · soft skills</div>
+                <div class="ov-mini">+ ver árbol</div>
+              </button>
+            </div>
+
+            <div class="ov-col right">
+              <button class="ov-card" data-view="journal">
+                <div class="ov-title">DIARIO</div>
+                <div class="ov-sub">Proyectos · experiencia (misiones)</div>
+                <div class="ov-mini">+ abrir diario</div>
+              </button>
+
+              <button class="ov-card" data-view="map">
+                <div class="ov-title">MAPA</div>
+                <div class="ov-sub">Links · ciudad · contacto</div>
+                <div class="ov-mini">+ abrir mapa</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- About me: pestaña inferior derecha -->
+          <button class="about-tab" id="about-tab" aria-expanded="false">
+            ABOUT ME
+          </button>
+
+          <aside class="about-drawer" id="about-drawer" aria-hidden="true">
+            <div class="about-header">
+              <div class="about-title">ABOUT ME</div>
+              <button class="about-close" id="about-close" aria-label="Cerrar">✕</button>
+            </div>
+            <div class="about-body">
+              <div class="about-media" aria-hidden="true"></div>
+              <div class="about-text">
+                <p>
+                  Aquí va tu texto personal: enfoque, motivación, qué buscas, cómo trabajas.
+                  (Lo pulimos luego con tu tono.)
+                </p>
+                <p class="muted">
+                  Sugerencia: 5–7 líneas máximo. El resto puede vivir en Diario o en Personaje.
+                </p>
               </div>
-            </div>
-        
-            <nav class="hud-tabs" aria-label="Secciones">
-              <button class="tab is-active" data-view="perfil">PERSONAJE</button>
-              <button class="tab" data-view="proyectos">INVENTARIO</button>
-              <button class="tab" data-view="competencias">CIBERWARE</button>
-              <button class="tab" data-view="estudios">MAPA</button>
-              <button class="tab" data-view="contacto">DIARIO</button>
-            </nav>
-        
-            <div class="hud-right">
-              <div class="hud-chip">321/466</div>
-              <div class="hud-chip">€$ 132327</div>
-            </div>
-          </header>
-        
-          <aside class="panel-left">
-        
-            <div class="card identity">
-              <div class="avatar" aria-hidden="true"></div>
-              <div class="id-text">
-                <div class="name">RAÚL</div>
-                <div class="tagline">Programador · Portfolio</div>
-              </div>
-            </div>
-      
-            <div class="card stats">
-              <div class="stat"><span class="k">STATUS</span><span class="v">ONLINE</span></div>
-              <div class="stat"><span class="k">ROL</span><span class="v">DEV</span></div>
-              <div class="stat"><span class="k">UBICACIÓN</span><span class="v">EU/ES</span></div>
-            </div>
-      
-            <div class="card nav">
-              <button class="nav-btn is-active" data-view="perfil">PERFIL</button>
-              <button class="nav-btn" data-view="estudios">ESTUDIOS</button>
-              <button class="nav-btn" data-view="competencias">COMPETENCIAS</button>
-              <button class="nav-btn" data-view="proyectos">PROYECTOS</button>
-              <button class="nav-btn" data-view="contacto">CONTACTO</button>
             </div>
           </aside>
-      
-          <main class="panel-main">
-            <header class="topbar">
-              <div class="crumbs">MENÚ / <span id="crumb">PERFIL</span></div>
-              <div class="meta">v0.1 · HTML/CSS/JS</div>
-            </header>
-      
-            <section class="content">
-              <article class="view is-active" id="view-perfil">
-                <h1>PERFIL</h1>
-                <p>Texto breve: quién eres, qué buscas, qué aportas.</p>
-              </article>
-      
-              <article class="view" id="view-estudios">
-                <h1>ESTUDIOS</h1>
-                <p>Tu formación, hitos, certificaciones.</p>
-              </article>
-      
-              <article class="view" id="view-competencias">
-                <h1>COMPETENCIAS</h1>
-                <p>Lenguajes, herramientas, soft skills (formato “atributos” tipo Cyberpunk).</p>
-              </article>
-      
-              <article class="view" id="view-proyectos">
-                <h1>PROYECTOS</h1>
-                <p>Cards con imágenes, stack, links, y bullets técnicos.</p>
-              </article>
-      
-              <article class="view" id="view-contacto">
-                <h1>CONTACTO</h1>
-                <p>Email, LinkedIn, GitHub, y/o formulario.</p>
-              </article>
+        </article>
+
+        <!-- CIBERWARE -->
+        <article class="view" id="view-cyberware">
+          <h1>CIBERWARE</h1>
+          <div class="grid-2">
+            <section class="card">
+              <h2>Formación</h2>
+              <ul class="list">
+                <li><strong>Grado</strong> — Diseño y Desarrollo de Videojuegos (UDIT)</li>
+                <li><strong>Técnico Superior</strong> — Sonido</li>
+              </ul>
             </section>
-          </main>
-        </div>
-      
-        <script src="script.js"></script>
-      </body>
+
+            <section class="card">
+              <h2>Certificaciones</h2>
+              <ul class="list">
+                <li><strong>CompTIA Security+</strong> — en progreso</li>
+                <li><strong>MCSE</strong> — en progreso</li>
+              </ul>
+            </section>
+
+            <section class="card">
+              <h2>Idiomas</h2>
+              <ul class="list">
+                <li>Español — Nativo</li>
+                <li>Inglés — C1 (en progreso)</li>
+                <li>Japonés — iniciando</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <!-- INVENTARIO -->
+        <article class="view" id="view-inventory">
+          <h1>INVENTARIO</h1>
+          <section class="card">
+            <p class="muted">Repositorios, demos y piezas enseñables. (Luego lo conectamos a GitHub.)</p>
+            <div class="inventory">
+              <a class="item" href="#" target="_blank" rel="noreferrer">
+                <div class="item-title">Repo 01 — Nombre</div>
+                <div class="item-sub">Stack · qué demuestra · link</div>
+              </a>
+              <a class="item" href="#" target="_blank" rel="noreferrer">
+                <div class="item-title">Repo 02 — Nombre</div>
+                <div class="item-sub">Stack · qué demuestra · link</div>
+              </a>
+            </div>
+          </section>
+        </article>
+
+        <!-- PERSONAJE -->
+        <article class="view" id="view-character">
+          <h1>PERSONAJE</h1>
+          <p class="muted">Árbol por ramas (tecnologías / competencias / soft skills). Base editable.</p>
+
+          <div class="skill-tree">
+            <section class="branch card">
+              <h2>TECNOLOGÍAS</h2>
+              <div class="meter"><span style="width:75%"></span></div>
+              <ul class="list">
+                <li>C++ · C# · JavaScript</li>
+                <li>HTML · CSS · SQL</li>
+                <li>Unreal · Unity</li>
+              </ul>
+            </section>
+
+            <section class="branch card">
+              <h2>COMPETENCIAS</h2>
+              <div class="meter"><span style="width:65%"></span></div>
+              <ul class="list">
+                <li>Arquitectura/POO</li>
+                <li>Debug · performance</li>
+                <li>Tooling · pipelines</li>
+              </ul>
+            </section>
+
+            <section class="branch card">
+              <h2>SOFT SKILLS</h2>
+              <div class="meter"><span style="width:70%"></span></div>
+              <ul class="list">
+                <li>Resolución · comunicación</li>
+                <li>Trabajo en equipo</li>
+                <li>Autonomía · proactividad</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <!-- DIARIO -->
+        <article class="view" id="view-journal">
+          <h1>DIARIO</h1>
+          <div class="journal">
+            <aside class="journal-list card">
+              <div class="jl-head">
+                <span class="badge badge-a">PRINCIPALES</span>
+                <span class="badge">SECUNDARIAS</span>
+              </div>
+              <div id="missions"></div>
+            </aside>
+
+            <section class="journal-detail card" id="mission-detail">
+              <div class="muted">Selecciona una misión para ver los detalles.</div>
+            </section>
+          </div>
+        </article>
+
+        <!-- MAPA -->
+        <article class="view" id="view-map">
+          <h1>MAPA</h1>
+          <div class="grid-2">
+            <section class="card">
+              <h2>Enlaces</h2>
+              <ul class="list">
+                <li><a class="link accent-c" href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a class="link accent-c" href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+              </ul>
+              <p class="muted">Ciudad: Madrid (o la que quieras mostrar).</p>
+            </section>
+
+            <section class="card">
+              <h2>Contacto</h2>
+              <form class="contact" id="contact-form">
+                <label>
+                  <span>Nombre</span>
+                  <input type="text" name="name" autocomplete="name" />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" required />
+                </label>
+                <label>
+                  <span>Mensaje</span>
+                  <textarea name="message" rows="4" required></textarea>
+                </label>
+                <button class="btn neon-split--subtle" type="submit">ENVIAR</button>
+                <div class="muted" id="contact-hint">
+                  (Luego lo conectamos a Formspree / Netlify Forms / backend propio.)
+                </div>
+              </form>
+            </section>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
